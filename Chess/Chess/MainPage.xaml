@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:Chess.Custom"
+             x:Class="Chess.MainPage">
+
+    <Grid x:Name="mainGrid" Padding="20"  >
+        <!-- Define Rows and Columns -->
+        <Grid.RowDefinitions>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Grid zero -->
+        <custom:ChessSquareGrid Grid.Row="0"
+                                Grid.Column="0"
+                                ID="0"
+                                SquareName="cell00">
+        <Frame Background="Black" x:Name="test" Grid.Row="0" Grid.Column="0"/>
+
+            <custom:ChessPiece TextColor="Red"
+                   BackgroundColor="Yellow"
+                   x:Name="tower"
+                   Text="Tower"
+                   ChessPieceType="Rook"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="OnPanUpdated"/>
+                </Label.GestureRecognizers>
+            </custom:ChessPiece>
+
+        </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="0" Grid.Column="1"
+                            SquareName="cell01"
+                            ID="1">
+        <Frame BackgroundColor="Transparent" />
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="0" Grid.Column="2"
+                            SquareName="cell02">
+        <Frame BackgroundColor="Black" />
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="0" Grid.Column="3"
+                            SquareName="cell03">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="0" Grid.Column="4"
+                            SquareName="cell04">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="0" Grid.Column="5"
+                            SquareName="cell05">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="0" Grid.Column="6"
+                            SquareName="cell06">
+        <Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="0" Grid.Column="7"
+                            SquareName="cell07">
+        <Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+
+    <!-- Row 1 -->
+    <custom:ChessSquareGrid Grid.Row="1" Grid.Column="0"
+                            SquareName="cell10">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="1" Grid.Column="1"
+                            SquareName="cell11">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="1" Grid.Column="2"
+                            SquareName="cell12">
+        <Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="1" Grid.Column="3"
+                            SquareName="cell13">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="1" Grid.Column="4"
+                            SquareName="cell14">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="1"
+                            Grid.Column="5"
+                            SquareName="cell15">
+        <Frame BackgroundColor="Black"/>
+
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="1"
+                            Grid.Column="6"
+                            SquareName="cell16">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="1"
+                            Grid.Column="7"
+                            SquareName="cell17">
+        <Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+
+    <!-- Row 2 -->
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="0" SquareName="cell20">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="1" SquareName="cell21">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="2" SquareName="cell22">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="3" SquareName="cell23">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="4" SquareName="cell24">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="5" SquareName="cell25">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="6" SquareName="cell26">
+        <Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="2" Grid.Column="7" SquareName="cell27">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+
+         <!-- Row 3 -->
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="0" SquareName="cell28">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="1" SquareName="cell29">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="2" SquareName="cell30">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="3" SquareName="cell31">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="4" SquareName="cell32">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="5" SquareName="cell33">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="6" SquareName="cell34">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="3" Grid.Column="7" SquareName="cell35">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+
+        
+       <!-- Row 4 -->
+    <custom:ChessSquareGrid Grid.Row="4"
+                            Grid.Column="0"
+                            SquareName="cell36">
+        <Frame BackgroundColor="Black"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="4"
+                            Grid.Column="1"
+                            SquareName="cell37">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="4"
+                            Grid.Column="2"
+                            SquareName="cell38">
+        <Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="4"
+                            Grid.Column="3"
+                            SquareName="cell39">
+        <Frame BackgroundColor="Transparent"/>
+    </custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="4" Grid.Column="4" SquareName="cell40"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="4" Grid.Column="5" SquareName="cell41"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="4" Grid.Column="6" SquareName="cell42"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="4" Grid.Column="7" SquareName="cell43"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+        
+        <!-- Grid five -->
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="0" SquareName="cell44"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="1" SquareName="cell45"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="2" SquareName="cell46"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="3" SquareName="cell47"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="4" SquareName="cell48"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="5" SquareName="cell49"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="6" SquareName="cell50"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="5" Grid.Column="7" SquareName="cell51"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+        
+        <!-- Grid six -->
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="0" SquareName="cell52"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="1" SquareName="cell53"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="2" SquareName="cell54"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="3" SquareName="cell55"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="4" SquareName="cell56"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="5" SquareName="cell57"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="6" SquareName="cell58"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="6" Grid.Column="7" SquareName="cell59"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+        <!-- Grid seven -->
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="0" SquareName="cell60"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="1" SquareName="cell61"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="2" SquareName="cell62"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="3" SquareName="cell63"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="4" SquareName="cell64"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="5" SquareName="cell65"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="6" SquareName="cell66"><Frame BackgroundColor="Transparent"/></custom:ChessSquareGrid>
+    <custom:ChessSquareGrid Grid.Row="7" Grid.Column="7" SquareName="cell67"><Frame BackgroundColor="Black"/></custom:ChessSquareGrid>
+        
+    </Grid>
+</ContentPage>
